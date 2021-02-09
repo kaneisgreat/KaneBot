@@ -42,14 +42,14 @@ Here is the list of all currently availabe commands:
     [k]cardsLeft      //KaneBot will tell you how many cards you have left in your deck
 ## Dependencies
 This project uses Java 8+ and all dependencies were handled using Maven.
-*Discord4j
- *Version 3.1.3
-*LavaPlayer
- *Version 1.3.67
-*Log4j
- *Version 1.7.5
-*Project Reactor
- *Version 3.4.2
+* Discord4j
+ * Version 3.1.3
+* LavaPlayer
+ * Version 1.3.67
+* Log4j
+ * Version 1.7.5
+* Project Reactor
+ * Version 3.4.2
 ## Future Plans
 ### Music
 I want to add in more functionality for Music. Some things that I will be looking to add in the future are skipping tracks, current track length, and clearing the current track playlist.
