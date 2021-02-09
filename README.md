@@ -27,7 +27,7 @@ Here is the list of all currently availabe commands:
 #### Card Games
 * war
    * play
-   * cardsleft
+   * cardsLeft
 ## Command Details and Usage
 ### Create Message Commands
     [k]<command>      //KaneBot will respond with the corresponding message.
