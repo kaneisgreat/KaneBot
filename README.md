@@ -1,30 +1,31 @@
 # KaneBot
 My own [Discord](https://discord.com/) bot coded using the [Discord4j](https://github.com/Discord4J/Discord4J), [LavaPlayer](https://github.com/sedmelluq/lavaplayer), 
 [Log4j](https://logging.apache.org/log4j/2.x/), and [Project Reactor](https://projectreactor.io/) libraries. This is a project I did for fun and is for my own personal use. 
+
 *** Currently the code does not work with the current version of Discord. There is a handshake issue with my bot and their server that I am looking into. ***
 
 ## Functionality
-  * Create messages in channels
-  * Play music from provided links
-  * Play the card game, War, with another mentioned user
+* Create messages in channels
+* Play music from provided links
+* Play the card game, War, with another mentioned user
 ### Commands
 To initiate a command start all commands with "[k]"
 Here is the list of all currently availabe commands:
 #### Create Messages
-    * ping
-    * ruhullah
-    * frank
-    * milan
-    * dave
- #### Music
-    * join
-    * disconnect
-    * play
-    * pause
- #### Card Games
-    * war
-        -play
-        -cardsleft
+* ping
+* ruhullah
+* frank
+* milan
+* dave
+#### Music
+* join
+* disconnect
+* play
+* pause
+#### Card Games
+  * war
+       *play
+       *cardsleft
 ## Command Details and Usage
 ### Create Message Commands
     [k]<command>      //KaneBot will respond with the corresponding message.
@@ -37,7 +38,7 @@ Here is the list of all currently availabe commands:
     [k]currentSong    //KaneBot will tell you the current song being played
 ### Card Games
     [k]war <user>     //starts a game of War with the valid user provided. ***You must start a game of war before using any of the War Game commands.
-   #### War Game
+#### War Game
     [k]play           //signals that you are ready to play your card. If both players are ready then the cards will be played.
     [k]cardsLeft      //KaneBot will tell you how many cards you have left in your deck
 ## Dependencies
@@ -52,8 +53,8 @@ This project uses Java 8+ and all dependencies were handled using Maven.
    * Version 3.4.2
 ## Future Plans
 ### Music
-I want to add in more functionality for Music. Some things that I will be looking to add in the future are skipping tracks, current track length, and clearing the current track playlist.
+I want to add in more functionality for to the music side of my bot. Some things that I will be looking to add in the future are skipping tracks, current track length, and clearing the current track's playlist.
 ### Card Games
-I will be looking to add in more advanced card games such as Poker and BlackJack. Additionally, I will improve upon the current War Game by having KaneBot sending card images instead of strings (ex. an actual picture of a king of spades vs "king of spades").
+I will be looking to add in more advanced card games such as Poker and BlackJack. Additionally, I will improve upon the current War Game by having KaneBot send card images instead of strings (ex. an actual picture of a king of spades vs "king of spades").
 ### Others
-Will fix bugs as I find them
+Will fix bugs as I find them.
