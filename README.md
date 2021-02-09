@@ -22,10 +22,12 @@ Here is the list of all currently availabe commands:
 * disconnect
 * play
 * pause
+* resume
+* currentSong
 #### Card Games
   * war
-       *play
-       *cardsleft
+     *play
+     *cardsleft
 ## Command Details and Usage
 ### Create Message Commands
     [k]<command>      //KaneBot will respond with the corresponding message.
