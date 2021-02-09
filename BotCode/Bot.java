@@ -93,27 +93,27 @@ public class Bot {
 		//Create client object that will establish a connection to Discord, using my bot's token
 		final GatewayDiscordClient client = DiscordClientBuilder.create(args[0]).build().login().block();
 		
-		//Basic commands that make the bot send a particular message to the command issuer's channel. Mostly messages I made for friends
-	    commands.put("ping", event -> event.getMessage().getChannel()
-	            .flatMap(channel -> channel.createMessage("Pong!"))
-	            .then());
-	    commands.put("ruhullah", event -> event.getMessage().getChannel()
-	            .flatMap(channel -> channel.createMessage("haha xD"))
-	            .then());
-	    commands.put("frank", event -> event.getMessage().getChannel()
-	            .flatMap(channel -> channel.createMessage("you're in exp range"))
-	            .then());
-	    commands.put("testie", event -> event.getMessage().getChannel()
-	            .flatMap(channel -> channel.createMessage("Talk to me when you have over 50 honbot rating lol."))
-	            .then());
-	    commands.put("milan", event -> event.getMessage().getChannel()
-	            .flatMap(channel -> channel.createMessage("mannn milannnnn"))
-	            .then());
-	    commands.put("dave", event -> event.getMessage().getChannel()
+	    	//Basic commands that make the bot send a particular message to the command issuer's channel. Mostly messages I made for friends
+	      	commands.put("ping", event -> event.getMessage().getChannel()
+	            	.flatMap(channel -> channel.createMessage("Pong!"))
+	            	.then());
+	    	commands.put("ruhullah", event -> event.getMessage().getChannel()
+	            	.flatMap(channel -> channel.createMessage("haha xD"))
+	            	.then());
+	    	commands.put("frank", event -> event.getMessage().getChannel()
+	            	.flatMap(channel -> channel.createMessage("you're in exp range"))
+	            	.then());
+	    	commands.put("testie", event -> event.getMessage().getChannel()
+	            	.flatMap(channel -> channel.createMessage("Talk to me when you have over 50 honbot rating lol."))
+	            	.then());
+	    	commands.put("milan", event -> event.getMessage().getChannel()
+	            	.flatMap(channel -> channel.createMessage("mannn milannnnn"))
+	            	.then());
+	    	commands.put("dave", event -> event.getMessage().getChannel()
 	    		.flatMap(channel -> channel.createMessage("never question my every intellegince every again"))
 	    		.then());
 	    
-	    //join the command issuer's channel
+	    	//join the command issuer's channel
 		commands.put("join", event -> Mono.justOrEmpty(event.getMember())
 			    .flatMap(Member::getVoiceState)
 			    .flatMap(VoiceState::getChannel)
@@ -143,18 +143,16 @@ public class Bot {
 		
 		//Starts a game of war between 2 users
 		commands.put("war", event -> warGame(event, client).then());
-		System.out.println("command put in");
 		
 		//Event listener that listens for message that starts with '[k]' and will then look for corresponding action in the map
 		client.getEventDispatcher().on(MessageCreateEvent.class)
-	    .flatMap(event -> Mono.justOrEmpty(event.getMessage().getContent())
-	        .flatMap(content -> Flux.fromIterable(commands.entrySet())
-	            .filter(entry -> content.startsWith("[k]" + entry.getKey()))
-	            .flatMap(entry -> entry.getValue().execute(event))
-	            .next()))
-	    .subscribe();
+	    		.flatMap(event -> Mono.justOrEmpty(event.getMessage().getContent())
+	        	.flatMap(content -> Flux.fromIterable(commands.entrySet())
+	            	.filter(entry -> content.startsWith("[k]" + entry.getKey()))
+	            	.flatMap(entry -> entry.getValue().execute(event))
+	            	.next()))
+	    		.subscribe();
 		
-
 		//When disconnected block until next signal
 		client.onDisconnect().block();
 	}
@@ -196,8 +194,7 @@ public class Bot {
 		            .next()))
 		    .subscribe();
 			
-		}
-		    
+		}    
 		return null;
 	}
 }
