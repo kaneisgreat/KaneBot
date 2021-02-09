@@ -7,15 +7,18 @@ public class Card {
 	private final Value value;
 	private final Suit suit;
 	
+	//construct card providing a value and suit
 	public Card(Value value, Suit suit) {
 		this.value = value;
 		this.suit = suit;
 	}
 	
+	//getter for the value
 	public Value getValue() {
 		return this.value;
 	}
 	
+	//getter for the suit
 	public Suit getSuit() {
 		return this.suit;
 	}
