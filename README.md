@@ -15,12 +15,16 @@ Here is the list of all currently availabe commands:
     * frank
     * milan
     * dave
-   #### Music
+ #### Music
     * join
     * disconnect
     * play
     * pause
-   #### Card Games
+ #### Card Games
     * war
-      - play
-      - cardsleft
+        -play
+        -cardsleft
+## Command Details and Usage
+### ping
+    KaneBot will respond with "Pong!".
+    ex. "[k]ping"
