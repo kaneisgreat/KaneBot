@@ -41,7 +41,7 @@ Here is the list of all currently availabe commands:
 ### Card Games
     [k]war <user>     //starts a game of War with the valid user provided. ***You must start a game of war before using any of the War Game commands.
 #### War Game
-    [k]playCard           //signals that you are ready to play your card. If both players are ready then the cards will be played.
+    [k]playCard       //signals that you are ready to play your card. If both players are ready then the cards will be played.
     [k]cardsLeft      //KaneBot will tell you how many cards you have left in your deck
 ## Dependencies
 This project uses Java 8+ and all dependencies were handled using Maven.
