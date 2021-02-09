@@ -43,13 +43,13 @@ Here is the list of all currently availabe commands:
 ## Dependencies
 This project uses Java 8+ and all dependencies were handled using Maven.
 * Discord4j
- * Version 3.1.3
+   * Version 3.1.3
 * LavaPlayer
- * Version 1.3.67
+   * Version 1.3.67
 * Log4j
- * Version 1.7.5
+   * Version 1.7.5
 * Project Reactor
- * Version 3.4.2
+   * Version 3.4.2
 ## Future Plans
 ### Music
 I want to add in more functionality for Music. Some things that I will be looking to add in the future are skipping tracks, current track length, and clearing the current track playlist.
