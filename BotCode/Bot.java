@@ -93,6 +93,7 @@ public class Bot {
 		//Create client object that will establish a connection to Discord, using my bot's token
 		final GatewayDiscordClient client = DiscordClientBuilder.create(args[0]).build().login().block();
 		
+		/*** The following are Message Commands ***/
 	    	//Basic commands that make the bot send a particular message to the command issuer's channel. Mostly messages I made for friends
 	      	commands.put("ping", event -> event.getMessage().getChannel()
 	            	.flatMap(channel -> channel.createMessage("Pong!"))
@@ -112,7 +113,8 @@ public class Bot {
 	    	commands.put("dave", event -> event.getMessage().getChannel()
 	    		.flatMap(channel -> channel.createMessage("never question my every intellegince every again"))
 	    		.then());
-	    
+	    	
+		/*** The following are music bot commands ***/
 	    	//join the command issuer's channel
 		commands.put("join", event -> Mono.justOrEmpty(event.getMember())
 			    .flatMap(Member::getVoiceState)
@@ -135,15 +137,28 @@ public class Bot {
 				.doOnNext(command -> playerManager.loadItem(command.get(1), scheduler))
 				.then());
 		
+		//resume the current track
+		commands.put("resume", event -> Mono.justOrEmpty(event.getMessage().getContent())
+				.map(content -> Arrays.asList(content.split(" ")))
+				.doOnNext(command -> playerManager.loadItem(command.get(1), scheduler))
+				.then());
+		
+		//tells you the current song being played
+		commands.put("currentSong", event -> Mono.justOrEmpty(event.getMessage().getContent())
+				.map(content -> Arrays.asList(content.split(" ")))
+				.doOnNext(command -> playerManager.loadItem(command.get(1), scheduler))
+				.then());
 		//attempts to load provided audio content and play it back
 		commands.put("play", event -> Mono.justOrEmpty(event.getMessage().getContent())
 		    .map(content -> Arrays.asList(content.split(" ")))
 		    .doOnNext(command -> playerManager.loadItem(command.get(1), scheduler))
 		    .then());
 		
+		/*** The following are Card Game Commands ***/
 		//Starts a game of war between 2 users
 		commands.put("war", event -> warGame(event, client).then());
 		
+		/*** Event Listening ***/
 		//Event listener that listens for message that starts with '[k]' and will then look for corresponding action in the map
 		client.getEventDispatcher().on(MessageCreateEvent.class)
 	    		.flatMap(event -> Mono.justOrEmpty(event.getMessage().getContent())
