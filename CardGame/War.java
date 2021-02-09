@@ -8,6 +8,7 @@ import discord4j.core.object.entity.channel.MessageChannel;
 import me.kaneisgreat.Command;
 import reactor.core.publisher.Mono;
 
+//extends the abstract class "Game"
 public class War extends Game {
 	//create a deck of cards that others cannot see
 	private Deck deck = new Deck();
@@ -214,6 +215,9 @@ public class War extends Game {
 				this.inSession = false;
 			}
 			
+			//set both players to "not ready" for the next turn
+			p1.setReady(false);
+			p2.setReady(false);
 		} else {
 			//if p1 is not ready notify the channel
 			if(!p1.isReady()) {
@@ -247,12 +251,12 @@ public class War extends Game {
 	
 	//add in all the commands to play a game of War
 	public void initCommands(Map<String, Command> commands) {
-		//command to play cards in the game of war
-	    commands.put("play", event -> play(event.getMessage().getAuthor(), event.getMessage().getId(), event.getMessage().getChannel())
+	 	//command to play cards in the game of war
+	    	commands.put("play", event -> play(event.getMessage().getAuthor(), event.getMessage().getId(), event.getMessage().getChannel())
 	    		.then());
 	    
-	    //command to see how many cards you have left
-	    commands.put("play", event -> playerCardsLeft(event.getMessage().getId(), event.getMessage().getChannel())
+	    	//command to see how many cards you have left
+	    	commands.put("play", event -> playerCardsLeft(event.getMessage().getId(), event.getMessage().getChannel())
 	    		.then());
 	}
 
