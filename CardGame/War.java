@@ -252,7 +252,7 @@ public class War extends Game {
 	//add in all the commands to play a game of War
 	public void initCommands(Map<String, Command> commands) {
 	 	//command to play cards in the game of war
-	    	commands.put("play", event -> play(event.getMessage().getAuthor(), event.getMessage().getId(), event.getMessage().getChannel())
+	    	commands.put("playCard", event -> play(event.getMessage().getAuthor(), event.getMessage().getId(), event.getMessage().getChannel())
 	    		.then());
 	    
 	    	//command to see how many cards you have left
