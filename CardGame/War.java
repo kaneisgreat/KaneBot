@@ -256,7 +256,7 @@ public class War extends Game {
 	    		.then());
 	    
 	    	//command to see how many cards you have left
-	    	commands.put("play", event -> playerCardsLeft(event.getMessage().getId(), event.getMessage().getChannel())
+	    	commands.put("cardsleft", event -> playerCardsLeft(event.getMessage().getId(), event.getMessage().getChannel())
 	    		.then());
 	}
 
