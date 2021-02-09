@@ -2,7 +2,7 @@
 My own [Discord](https://discord.com/) bot coded using the [Discord4j](https://github.com/Discord4J/Discord4J), [LavaPlayer](https://github.com/sedmelluq/lavaplayer), 
 [Log4j](https://logging.apache.org/log4j/2.x/), and [Project Reactor](https://projectreactor.io/) libraries. This is a project I did for fun and is for my own personal use. 
 
-*** Currently the code does not work with the current version of Discord. There is a handshake issue with my bot and their server that I am looking into. ***
+*** There is a handshake issue with my bot and the Discord server that I am looking into 2/1/2021. ***
 
 ## Functionality
 * Create messages in channels
