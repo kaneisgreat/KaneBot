@@ -9,7 +9,7 @@ My own [Discord](https://discord.com/) bot coded using the [Discord4j](https://g
 * Play music from provided links
 * Play the card game, War, with another mentioned user
 ### Commands
-To initiate a command start all commands with "[k]"
+To initiate a command, start all commands with "[k]".
 Here is the list of all currently availabe commands:
 #### Create Messages
 * ping
